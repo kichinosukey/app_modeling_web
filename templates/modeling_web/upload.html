@@ -1,0 +1,13 @@
+{% extends 'modeling_web/layout.html' %}
+{% block content %}
+<h3>Make Data Directory</h3>
+<form method="POST" action="/modeling_web/upload/dir">
+    <input type="text" id="datadir" name="datadir">
+    <input type="submit" value="set">
+</form>
+<h3>Upload File</h3>
+<form method="POST" enctype="multipart/form-data" action="/modeling_web/upload/dir/data">
+    <input type="file" name="files" multiple>
+    <input type="submit" value="upload">
+</form>
+{% endblock %}

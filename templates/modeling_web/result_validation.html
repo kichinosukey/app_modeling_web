@@ -1,0 +1,23 @@
+{% extends 'modeling_web/layout.html' %}
+{% block content %}
+<div id="app_result">
+    <div id="app_result_best_param">
+        {{ best_param }}
+    </div>
+    <div id="app_result_cv_score">
+        {{ cv_score }}
+    </div>
+    <div id="app_result_val_set_score">
+        {{ val_score }}
+    </div>
+    <div id="app_result_test_score">{{ test_score }}</div>
+    <div id="app_result_mean_fit_time">{{ mean_fit_time }}</div>
+    <div id="app_result_std_fit_time">{{ std_fit_time }}</div>
+    <div id="app_result_mean_score_time">{{ mean_score_time }}</div>
+    <div id="app_result_std_score_time">{{ std_score_time }}</div>
+    <div id="app_result_params">{{ params }}</div>
+    <div id="app_result_mean_test_score">{{ mean_test_score }}</div>
+    <div id="app_result_std_test_score">{{ std_test_score }}</div>
+    <div id="app_result_rank_test_score">{{ rank_test_score }}</div>
+</div>
+{% endblock %}

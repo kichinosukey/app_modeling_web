@@ -1,0 +1,168 @@
+{% extends 'phase4_web/layout.html' %}
+{% block content %}
+<h2>Setup</h2>
+<form action="setup" method="post">
+<div class="setup_form" id="app_setup">
+    <div>
+        <h3>Scenario</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Positioning</th>
+                    <th>Size</th>
+                    <th>Generation</th>
+                    <th>Selection</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Top</td>
+                    <td>Individual</td>
+                    <td>1st</td>
+                    <td>
+                        <input type="checkbox" id="scenario_1" name="scenario_1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Top</td>
+                    <td>Individual</td>
+                    <td>2nd</td>
+                    <td>
+                        <input type="checkbox" id="scenario_2" name="scenario_2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Top</td>
+                    <td>Architechture</td>
+                    <td>1st</td>
+                    <td>
+                        <input type="checkbox" id="scenario_3" name="scenario_3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Top</td>
+                    <td>Architechture</td>
+                    <td>2nd</td>
+                    <td>
+                        <input type="checkbox" id="scenario_4" name="scenario_4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Same as competitor</td>
+                    <td>Individual</td>
+                    <td>1st</td>
+                    <td>
+                        <input type="checkbox" id="scenario_5" name="scenario_5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Same as competitor</td>
+                    <td>Individual</td>
+                    <td>2nd</td>
+                    <td>
+                        <input type="checkbox" id="scenario_6" name="scenario_6">
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Same as competitor</td>
+                    <td>Architechture</td>
+                    <td>1st</td>
+                    <td>
+                        <input type="checkbox" id="scenario_7" name="scenario_7">
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Same as competitor</td>
+                    <td>Architechture</td>
+                    <td>2nd</td>
+                    <td>
+                        <input type="checkbox" id="scenario_8" name="scenario_8">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3>Option</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Architechture</th>
+                    <td>Radiator Fan</td>
+                    <td>
+                        <input type="checkbox" id="check_radifan" name="check_radifan">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>Frame Side/Sub/Lmbr</td>
+                    <td>
+                        <input type="checkbox" id="check_frame" name="check_frame">                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>Sort</th>
+                    <td>Fuel Consumption</td>
+                    <td>
+                        <input type="checkbox" id="check_fc" name="check_fc" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>Power Performance</td>
+                    <td>
+                        <input type="checkbox" id="check_pp" name="check_pp" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>Size</td>
+                    <td>
+                        <input type="checkbox" id="check_size" name="check_size" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>Collision</td>
+                    <td>
+                        <input type="checkbox" id="check_coll" name="check_coll" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Light Weight</th>
+                    <td>Aluminium</td>
+                    <td>
+                        <input type="checkbox" id="check_lw" name="check_lw">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Other</th>
+                    <td>File Update</td>
+                    <td>
+                        <input type="checkbox" id="check_update" name="check_update" checked>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <h3>Comment</h3>
+            <input type="text" id="comment" name="comment">
+        </div>
+    </div>
+</div>
+<div>
+    <input type="submit" id="submit" name="submit" value="setup">
+</div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/specsim/static/js/setup.js"></script>
+{% endblock %}

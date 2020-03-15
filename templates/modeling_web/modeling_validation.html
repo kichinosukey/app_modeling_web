@@ -1,0 +1,51 @@
+{% extends 'modeling_web/layout.html' %}
+{% block content %}
+<form method="POST" action="/modeling_web/validation/model">
+    <div id="app_xcolumns" class="Xcolumns">
+        <select name="xcolumns" size="10" multiple>
+            <option value="">---Select X variables---</option>
+            {% for column in columns %}
+            <option value="{{ column }}">{{column}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div id="app_ycolumn" class="ycolumn">
+        <select name="ycolumn" size="10" multiple>
+            <option value="">---Select Y variable---</option>
+            {% for column in columns %}
+            <option value="{{ column }}">{{column}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div id="app_modeltype" class="ModelType">
+         <select name="model_type" size="5">
+            <option value="">---Select Model Type---</option>
+            {% for model_type in model_types %}
+            <option value="{{ model_type }}">{{model_type}}</option>
+            {% endfor %}
+        </select>       
+    </div>
+    <div id="app_hyper_parameter" class="HyperParameter">
+        <div>
+            <select name="alpha" size="5" multiple>
+                <option value="">---Select alpha---</option>
+                {% for alpha in alpha_list %}
+                <option value="{{ alpha }}">{{alpha}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <select name="deg" size="5" multiple>
+                <option value="">---Select deg---</option>
+                {% for deg in deg_list %}
+                <option value="{{ deg }}">{{deg}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div id="app_cv" class="CrossValNum">
+        <input name="cv" type="number" max="10" min="1" step="1" value="5">
+    </div>       
+    <input type="submit" value="upload">
+</form>
+{% endblock %}

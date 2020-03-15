@@ -1,0 +1,51 @@
+.menu ul {
+  display: inline-block;
+  vertical-align: top;
+  margin: auto;
+  list-style: none;
+}
+
+.menu li {
+  text-align: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #dbdcdf;
+  color: #000000;
+}
+
+.menu li a.active {
+  color: #ffffff;
+  background-color: brown;
+}
+
+.menu li a:hover:not(.active) {
+  color: #ffffff;
+  background-color: #1b2538;
+}
+
+.setup_form div {
+  text-align: left;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.setup_form table {
+  padding: 10px;
+}
+
+.setup_form table th {
+  border-bottom: 1px solid #1b2538;
+}
+
+.setup_form table td {
+  border-bottom: 1px solid #1b2538;
+}
+
+.setup_form div input#comment {
+  width: 400px;
+  height: 50px;
+}
